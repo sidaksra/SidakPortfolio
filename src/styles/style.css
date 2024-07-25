@@ -207,7 +207,9 @@ hr {
     margin: 20px 50px;
     padding: 40px 0;
     display: flex;
+    justify-content: center;
 }
+
 
 .my-image-main-page {
   height: 300px;

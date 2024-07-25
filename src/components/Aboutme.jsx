@@ -7,18 +7,15 @@ const Aboutme = () => {
         <div>
           <div className="aboutme-section-flex">
             <div>
-              <p className="hey-there">Hey there,</p>
-              <h2 className="heading-animation">I'm SIDAK SINGH SRA</h2>
-              <p className="aboutme-para">
-  I am a proud graduate with a Bachelor of Science (Honours) in Computer Science (with specialization in Software Engineering) from <span className="trent-link"><a href="https://www.trentu.ca/" target="_blank" rel="noreferrer" className="underlineHoverEffect-2">Trent University, Canada</a></span>. My academic journey was marked by consistent recognition on the Dean's Honour Roll for four consecutive years, a testament to my dedication and excellence.
-  <br /><br />
-  With a strong foundation in <span className="bold-text">C#, Python, HTML, CSS, PHP, MySQL, ReactJS,</span> and <span className="bold-text">JavaScript</span>, I specialize in developing interactive web applications and performing data analytics. My experience includes leading projects and collaborating effectively within teams to achieve high-quality results on time.
-  <br /><br />
-  Explore my work to see how I leverage my skills to create innovative solutions and drive success in every project.
-</p>
-
-
-
+                <p className="hey-there">Hey there,</p>
+                <h2 className="heading-animation">I'm SIDAK SINGH SRA</h2>
+                <p className="aboutme-para">
+                I am a proud graduate with a Bachelor of Science (Honours) in Computer Science (with specialization in Software Engineering) from <span className="trent-link"><a href="https://www.trentu.ca/" target="_blank" rel="noreferrer" className="underlineHoverEffect-2">Trent University, Canada</a></span>. My academic journey was marked by consistent recognition on the Dean's Honour Roll for four consecutive years, a testament to my dedication and excellence.
+                <br /><br />
+                With a strong foundation in <span className="bold-text">C#, Python, HTML, CSS, PHP, MySQL, ReactJS,</span> and <span className="bold-text">JavaScript</span>, I specialize in developing interactive web applications and performing data analytics. My experience includes leading projects and collaborating effectively within teams to achieve high-quality results on time.
+                <br /><br />
+                Explore my work to see how I leverage my skills to create innovative solutions and drive success in every project.
+              </p>
             </div>
             <div>
               <img src={require("../images/SidakSra.jpg")} alt="My Image" className="my-image-main-page image-animation" />
