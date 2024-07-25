@@ -1,0 +1,900 @@
+:root{
+    --body-font: 'Poppins', sans-serif;
+}
+
+/* Main Page elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,p{
+    margin: 0;
+}
+
+ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.bold-text{
+  font-weight: bold;
+}
+
+body{
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fafafa; 
+    
+}
+
+/* For Navigation */
+header nav{
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 22px;
+
+    
+}
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top:0;
+  }
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.navigation-right ul{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation-right ul li{
+    margin: 0 23px;
+}
+
+.navigation-right ul li a{
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* CSS For underline hover effect */
+.underlineHoverEffect {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+    cursor: pointer;
+}
+.underlineHoverEffect::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.35s ease-out;
+}
+.underlineHoverEffect:hover::before {
+    width: 100%;
+}
+/* End of hover effect */
+
+/* End of Navigation Bar */
+
+
+.info-about-me .buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap:25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-about-me button {
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    min-width: 270px;
+}
+
+/* Set initial state for the buttons */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  text-transform: uppercase;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  color: ghostwhite;
+  touch-action: manipulation;
+  opacity: 0;
+}
+
+/* Add animation for the buttons */
+.appear {
+  animation: button-appear 0.5s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes button-appear {
+  0% {
+      opacity: 0.2;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.button-52:after {
+  content: "";
+  background-color: #0A66C2;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+  
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+  
+.name-tag{
+    text-transform: uppercase;
+
+}
+
+.name-tag a{
+  color: white;
+}
+
+/* Line break between sections */
+
+hr {
+    height: 2px;
+    margin: 0px 450px;
+    border: 0;
+    margin-top: 75px;
+    animation-name: normalanimaton;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes normalanimaton{
+    from {background-color:#ff4d56;}
+  to {background-color: #0A66C2;}
+}
+
+.aboutme-section{
+    margin: 20px 50px;
+    padding: 40px 0;
+    display: flex;
+}
+
+.my-image-main-page {
+  height: 300px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.info-about-me{
+  padding-top: 80px;
+  font-family: 'Poppins', sans-serif;
+}
+.aboutme-section-flex h2{
+  font-size: 4.2rem;
+  letter-spacing: 4px;
+}
+
+.hey-there{
+  color: #051325;
+  font-size: 1.8rem;
+}
+
+/* Add animation keyframes */
+@keyframes slide-in {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Add animation for the heading */
+.heading-animation {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #2c3e50, #34495e, #2ecc71, #e74c3c, #8e44ad);
+  background-size: 500% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff; /* Cursor effect */
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite, gradient 10s ease infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+/* Gradient background animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+/* Add animation for the image */
+.image-animation {
+  animation: slide-in 1s ease-out;
+}
+
+/* Rest of your existing CSS */
+.aboutme-section-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    padding: 25px;
+}
+
+.aboutme-para {
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 20px;
+    color: #051325;
+    line-height: 25px;
+}
+
+
+
+
+.trent-link a{
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.impact-line{
+    margin-top: 80px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.software-impact-line{
+    font-size: 38px;
+    line-height: 2;
+    animation-name: textanimation;
+    animation-fill-mode: both;
+    animation: textanimation 5s alternate infinite;
+    display: inline-block;
+    transition-timing-function: ease-in;
+    
+}
+
+@keyframes textanimation{
+    
+  from {color: #0A66C2;}
+  to {color:#ff4d56;}
+}
+
+
+/* CSS For underline hover effect */
+.underlineHoverEffect-2 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+    cursor: pointer;
+}
+.underlineHoverEffect-2::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color:#ff4d56;
+    transition: width 0.35s ease-out;
+}
+.underlineHoverEffect-2:hover::before {
+    width: 100%;
+}
+/* End of hover effect */
+
+/* End of Second Section About Me */
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+/* Start of Third Section - Education Impact*/
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+
+}
+
+.section__text__p1 {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.education-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.education-column, .achievements-column {
+  width: 48%;
+}
+
+.education-card, .achievements-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.column-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.education-timeline, .achievements-timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.education-item, .achievements-item {
+  position: relative;
+  padding: 0px 0px 30px 0px;
+  margin-left: 10px;
+  border-left: 2px solid #3498db;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: #3498db;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.education-content, .achievements-content {
+  padding-left: 30px;
+}
+
+.school-name {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.education-period, .program-name, .grades {
+  margin: 5px 0;
+  color: #666;
+}
+
+.achievement-heading {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.achievement-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.achievement-list li {
+  margin: 10px 0;
+  color: #333;
+}
+
+
+
+/* End of Education Section */
+
+/* Start of 4th Section Skills and Hobbies */
+
+.circle-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-box, .hobbies-box {
+    padding: 50px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px; 
+    border-radius: 20px;
+}
+  
+  
+.skills-box ul li:hover, .hobbies-box ul li:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.skills-box ul li, .hobbies-box ul li{
+    background-color: white;
+    border-radius: 10px;
+    width: 170px;
+    height: 40px; /* Adjust the height as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;
+ 
+}
+.skills-box div{
+    margin-bottom: 22px;
+}
+
+.skills-box h2, .hobbies-box h2 {
+    margin-bottom: 10px;
+    color: ghostwhite;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.skills-box ul, .hobbies-box ul {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.skills-box ul li, .hobbies-box ul li {
+    margin-bottom: 5px;
+   
+}
+
+.skills-box ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+    justify-content: center;
+}
+
+
+/* End of 4th section */
+
+/* Contact Me Page CSS */
+.touch-text{
+  font-size: 8vw; 
+  margin-left: 30px;
+}
+.get-in-section .get-in-text{
+  font-size: 8vw;
+}
+.profile-image-container {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #bec3c8;
+  border-radius: 50%;
+  overflow: hidden;
+  justify-content: center;
+
+  }
+
+.image-and-line{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    
+}
+
+.get-in-section{
+    font-family: 'Black Ops One', cursive;   
+}
+
+.contact-first-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.email-div p{
+    margin-top: 60px;
+    font-family: 'Ruwudu', serif;
+    font-size: 30px;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ruwudu', serif;
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+.social-links a{
+    color:#0A66C2;
+
+}
+
+.social-links a:hover{
+    color:#ff4d56;
+}
+
+
+.my-ending-line p{
+    text-align: justify;
+    width: 300px;
+    font-family: 'Ruwudu', serif;
+    margin-bottom: 55px;
+}
+.my-ending-line h2{
+    font-family: 'Ruwudu', serif;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.email-div a{
+    color:#0A66C2;
+}
+
+
+
+footer {
+  height: 5vh;
+  padding-top: 5vh;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+/* Work Experience Page CSS */
+
+
+.work-experience {
+  position: relative;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+  text-transform: uppercase;
+  padding-top: 170px;
+  padding-bottom: 50px;
+  color: white;
+  opacity: 0.9;
+}
+
+.work-experience a {
+  color: #fff485;
+  background-color: black;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+.work-experience h1{
+    font-size: 130px;
+}
+
+.company-name{
+    font-style: italic;
+}
+.project-title p{
+    font-size: 60px;
+}
+
+/* End of work experience section  */
+
+
+.project-heading h1{
+    font-size: 85px;
+    font-family: 'Black Ops One', cursive;
+    text-transform: uppercase;
+  }
+  .project-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5vh;
+
+  }
+  .project-description{
+    width: 20em;
+    font-size: 14px;
+    color: #707070;
+    padding: 1.5em;
+    text-align: justify;
+  }
+
+ /* Projects.css */
+
+.projects {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.project-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.project-grid {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.project-box:hover {
+  transform: translateY(-5px);
+}
+
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.project-box {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details {
+  flex-grow: 1; /* Allow the details section to expand vertically */
+  padding: 5px 0px 40px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-buttons {
+  margin-top: auto; /* Push buttons to the bottom */
+  display: flex;
+  justify-content:center; /* Space buttons evenly */
+}
+.project-buttons a {
+  margin-right: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.project-buttons a:hover {
+  background-color: #0056b3;
+}
+
+  
+
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+
+/* EXPERIENCE SECTION */
+
+#skills {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+  width: 20%;
+}
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  text-align: center;
+}
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+#skills {
+  padding-top: 6vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section__text__p1 {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+
+.Education-Rewards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  flex-wrap: wrap;
+  padding: 2vh;
+}
+
+.Education-Rewards .icon{
+  cursor: default;
+  width: 8%;
+}
+
+.Education-Rewards p {
+  padding-top: 2vh;
+}
+.Education{
+  padding-top: 5vh;
+}
+
+
